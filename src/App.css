@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: grid;
+    grid-template-columns: 95vw 5vw;
+    background-color: #1E1E1E;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    font-size: 24px;
+    padding: 20px 50px;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+    color: #FFF;
+}
+
+.cart {
+    place-self: center;
+    color: #FFF;
+    font-size: 20px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    width: 80vw;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid #9c9c9c; */
+}
+
+.product-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform .2s;
+    margin-bottom: 15px;
+}
+
+.product-link:hover {
+    transform: scale(1.1);
+}
+
+.product-title {
+    color: #000;
+}
+
+.product-price {
+    color: #868686;
+    font-weight: bold;
+}
+
+.productDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.productDetails {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin-top: 40px;
+}
+
+.productDetailsText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.productDesc {
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 90px;
+    margin: 15px 0;
+}
+
+.qtyButton {
+    cursor: pointer;
 }
