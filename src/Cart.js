@@ -1,23 +1,52 @@
 import React, { useState, useEffect } from 'react';
+import { MinusSquare, PlusSquare, Delete } from './Icons';
 
 
-export default function Cart (props) {
+export default function Cart ({cart, delProducts, addProducts}) {
 
-    const [totalProducts, setTotalProducts] = useState(0);
 
-    useEffect(() => {
-        console.log("ran useEffect");
-        if (isNaN(props.qty)===false)
-            addProducts(parseInt(props.qty));      
-    });
+    function displayCart () {
 
-    function addProducts (x) {
-        setTotalProducts(prevTotalProducts => prevTotalProducts + x);
+        if (Object.keys(cart).length === 0) {
+            return (<h2>Cart is empty</h2>);
+        }
+        else {
+            return (cart.map(product => 
+                        <div className="cart-row" key={product.id}>
+                            <img src={product.image} width="50px"/>
+                            <p>{product.title}</p>
+                            <div className="product-price">${parseFloat(product.price).toFixed(2)}</div>
+                            <div className="qty">
+                                <div className="qtyButton" onClick={() => delProducts(1, product.id)}>
+                                    <MinusSquare />
+                                </div>
+                                {product.qty}
+                                <div className="qtyButton" onClick={() => addProducts(1, product)}>
+                                    <PlusSquare />
+                                </div>
+                            </div>
+                            <div className="qtyButton" onClick={() => delProducts(product.qty, product.id)}>
+                                <Delete />
+                            </div>
+                        </div>
+                    )
+                );
+        }
     }
+
+    function displayTotal () {
+        let total = 0;
+        cart.map(product =>
+            total += product.price * product.qty);
+        return parseFloat(total).toFixed(2);
+
+    }
+
     
     return (
-        <div>
-            {totalProducts}
+        <div className="cart-display">
+            {displayCart()}
+            <h3>Total: ${displayTotal()}</h3>
         </div>
     );
 

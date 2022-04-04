@@ -21,17 +21,15 @@ export default function ProductDetails({addProducts}) {
             setQty(prevQty => prevQty - 1);
     }
 
-    console.log(data);
-
     return (
         <div className="productDetail">
             <h3>{data.title}</h3>
-            <div class="productDetails">
+            <div className="productDetails">
                 <img src={data.image} width="400px"/>
-                <div class="productDetailsText">
-                    <div class="productDesc">{data.description}</div>
-                    <div class="product-price">${parseFloat(data.price).toFixed(2)}</div>
-                    <div class="qty">
+                <div className="productDetailsText">
+                    <div className="productDesc">{data.description}</div>
+                    <div className="product-price">${parseFloat(data.price).toFixed(2)}</div>
+                    <div className="qty">
                         <div className="qtyButton" onClick={decreaseQty}>
                             <MinusSquare />
                         </div>
@@ -40,7 +38,7 @@ export default function ProductDetails({addProducts}) {
                             <PlusSquare />
                         </div>
                     </div>
-                    <button onClick={() => addProducts(qty)}>Add to Cart</button>
+                    <button onClick={() => addProducts(qty, data)}>Add to Cart</button>
                 </div>
             </div>
         </div>

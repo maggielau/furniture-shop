@@ -123,3 +123,17 @@ nav a {
 .qtyButton {
     cursor: pointer;
 }
+
+.cart-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-columns: 80px 400px 80px 140px 40px;
+    align-items: center;
+    margin-top: 40px;
+}

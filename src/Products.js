@@ -12,7 +12,6 @@ export default function Products() {
     const [products, setProducts] = useState([]);
 
     function fetchProducts() {
-        console.log(data);
         setProducts(data);
     }
 
@@ -28,7 +27,7 @@ export default function Products() {
                             <p className="product-title">{product.title}</p>
                         </div>
                     </Link>
-                    <div class="product-price">${parseFloat(product.price).toFixed(2)}</div>
+                    <div className="product-price">${parseFloat(product.price).toFixed(2)}</div>
                     </div>
                 ))}
             </div>
