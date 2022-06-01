@@ -60,7 +60,6 @@ function App() {
       newCart[index].qty -= x;
     }
     setCart([...newCart]);
-
   }
 
   return (
