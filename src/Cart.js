@@ -12,12 +12,12 @@ export default function Cart ({cart, delProducts, addProducts}) {
         }
         else {
             return (cart.map(product => 
-                        <div className="cart-row" key={product.id}>
+                        <div className="cart-row" key={product._id}>
                             <img src={product.image} width="50px"/>
                             <p>{product.title}</p>
                             <div className="product-price">${parseFloat(product.price).toFixed(2)}</div>
                             <div className="qty">
-                                <div className="qtyButton" onClick={() => delProducts(1, product.id)}>
+                                <div className="qtyButton" onClick={() => delProducts(1, product._id)}>
                                     <MinusSquare />
                                 </div>
                                 {product.qty}
@@ -25,7 +25,7 @@ export default function Cart ({cart, delProducts, addProducts}) {
                                     <PlusSquare />
                                 </div>
                             </div>
-                            <div className="qtyButton" onClick={() => delProducts(product.qty, product.id)}>
+                            <div className="qtyButton" onClick={() => delProducts(product.qty, product._id)}>
                                 <Delete />
                             </div>
                         </div>

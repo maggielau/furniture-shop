@@ -19,11 +19,13 @@ function App() {
 
   function addProducts (x, data) {
     setTotalProducts(prevTotalProducts => prevTotalProducts + x);
+    console.log(data);
+    console.log(data._id)
 
     //if this product already exists in the cart, add to quantity
-    if (cart.filter(x => x.id === data.id).length>0) {
+    if (cart.filter(x => x._id === data._id).length>0) {
       let index = cart.findIndex(object => {
-        return object.id === data.id;
+        return object._id === data._id;
       });
       let newCart = [...cart];
       newCart[index].qty += x;
@@ -33,7 +35,7 @@ function App() {
     //otherwise add the product id, price, and qty to cart
     else {
       let object = {};
-      object["id"] = data.id;
+      object["_id"] = data._id;
       object["title"] = data.title;
       object["image"] = data.image;
       object["price"] = data.price;
@@ -42,11 +44,11 @@ function App() {
     }
   }
 
-  function delProducts (x, id) {
+  function delProducts (x, _id) {
     setTotalProducts(prevTotalProducts => prevTotalProducts - x);
 
     let index = cart.findIndex(object => {
-      return object.id === id;
+      return object._id === _id;
     });
 
     let newCart = [...cart];

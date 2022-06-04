@@ -25,7 +25,7 @@ export default function ProductDetails({addProducts}) {
         <div className="productDetail">
             <h3>{data.title}</h3>
             <div className="productDetails">
-                <img src={data.image} width="400px"/>
+                <img src={"http://localhost:3000"+data.image} width="400px"/>
                 <div className="productDetailsText">
                     <div className="productDesc">{data.description}</div>
                     <div className="product-price">${parseFloat(data.price).toFixed(2)}</div>
