@@ -5,7 +5,10 @@ export default function Nav() {
 
     return (
         <nav>
-            <div>Furniture Shop Logo and Name</div>
+            <div className="logo-container">
+                <img src='/images/logo.svg' />
+                <h1>Furnico</h1>
+            </div>
             <ul>
                 <Link to="/"><li>Home</li></Link>
                 <Link to="/products"><li>Products</li></Link>

@@ -47,6 +47,7 @@ export default function Cart ({cart, delProducts, addProducts}) {
         <div className="cart-display">
             {displayCart()}
             <h3>Total: ${displayTotal()}</h3>
+            <button>Check Out</button>
         </div>
     );
 

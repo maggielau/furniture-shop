@@ -1,5 +1,48 @@
 export default function Home() {
     return (
-        <h2>Homepage</h2>
+        <div className="home-main">
+            <div className="hero">
+                <img src="/images/hero2.webp" />
+            </div>
+            <div className="home-icon-section">
+                <div className="feature-icon">
+                    <img src="/images/icon1.png"></img> <span>Every season, <strong>new</strong> products</span>
+                </div>
+                <div className="feature-icon">
+                    <img src="/images/icon2.png"></img> <span>Reliable, fast, <strong>free</strong> delivery</span>
+                </div>
+                <div className="feature-icon">
+                    <img src="/images/icon3.png"></img> <span>Eco-friendly, <strong>sustainable</strong> design</span>
+                </div>
+            </div>
+            <hr></hr>
+            <div className="home-section">
+                <h2>Inspiration.</h2>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                <div className="home-pictures">
+                    <figure>
+                        <img src="/images/home-pic1.jpg" />
+                        <figcaption>Dine.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/home-pic2.jpg" />
+                        <figcaption>Live.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/home-pic3.jpg" />
+                        <figcaption>Work.</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <hr></hr>
+            <div className="home-quote">
+                    <h2>Crafted with excellence.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    <figure>
+                        <img src="/images/workshop.webp" />
+                        <figcaption>"Sed risus pretium quam vulputate dignissim suspendisse in est. Faucibus nisl tincidunt eget nullam non." </figcaption>
+                    </figure>
+            </div>
+        </div>
     );
 }

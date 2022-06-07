@@ -66,21 +66,28 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <div className="header">
-          <Nav />
-          <div className="cart">
-            <Link to="/cart"><ShoppingCart /></Link>
-            {totalProducts}
+      <div className="content">
+        <div className="main-container">
+          <div className="header">
+            <Nav />
+            <div className="cart">
+              <Link to="/cart"><ShoppingCart /></Link>
+              {totalProducts}
+            </div>
+          </div>
+          <div className="route-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/products/:id" element={<ProductDetails addProducts={addProducts}/>} />
+              <Route path="/cart" element={<Cart cart={cart} delProducts={delProducts} addProducts={addProducts}/>} />
+            </Routes>
           </div>
         </div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products/:id" element={<ProductDetails addProducts={addProducts}/>} />
-          <Route path="/cart" element={<Cart cart={cart} delProducts={delProducts} addProducts={addProducts}/>} />
-        </Routes>
+        <div className="footer">
+        <a href="https://github.com/maggielau" target="_blank"><img src="/images/github-logo-small-white.svg" /></a>Maggie Lau
+        </div>
       </div>
     </Router>
   );

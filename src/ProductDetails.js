@@ -22,18 +22,18 @@ export default function ProductDetails({addProducts}) {
     }
 
     return (
-        <div className="productDetail">
-            <h3>{data.title}</h3>
-            <div className="productDetails">
+        <div className="product-detail">
+            <h2>{data.title}</h2>
+            <div className="product-details">
                 <img src={"http://localhost:3000"+data.image} width="400px"/>
-                <div className="productDetailsText">
-                    <div className="productDesc">{data.description}</div>
+                <div className="product-details-text">
+                    <div className="product-desc">{data.description} </div>
                     <div className="product-price">${parseFloat(data.price).toFixed(2)}</div>
                     <div className="qty">
                         <div className="qtyButton" onClick={decreaseQty}>
                             <MinusSquare />
                         </div>
-                        {qty}
+                        <div>{qty}</div>
                         <div className="qtyButton" onClick={increaseQty}>
                             <PlusSquare />
                         </div>

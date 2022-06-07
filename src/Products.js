@@ -47,7 +47,7 @@ export default function Products() {
 
     return (
         <div className="products-container">
-            <h2>Products</h2>
+            <h2>Our Products</h2>
 
             <div className="categories-nav">
                 <ul>
