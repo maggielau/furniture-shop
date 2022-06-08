@@ -11,6 +11,9 @@ import { ShoppingCart } from "./Icons";
 import { Link } from 'react-router-dom';
 
 
+const openNav = () => {
+  document.getElementById("mobile-nav").style.height = "100%";
+}
 
 function App() {
 
@@ -73,7 +76,11 @@ function App() {
             <div className="cart">
               <Link to="/cart"><ShoppingCart /></Link>
               {totalProducts}
+              <a href="javascript:void(0);" className="burger-menu" onClick={openNav}>
+                    <i class="fa fa-bars"></i>
+            </a>
             </div>
+            
           </div>
           <div className="route-content">
             <Routes>

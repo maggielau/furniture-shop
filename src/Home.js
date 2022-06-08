@@ -2,7 +2,7 @@ export default function Home() {
     return (
         <div className="home-main">
             <div className="hero">
-                <img src="/images/hero2.webp" />
+                <img src="/images/hero1.webp" />
             </div>
             <div className="home-icon-section">
                 <div className="feature-icon">

@@ -10,6 +10,7 @@ html {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
@@ -38,6 +39,7 @@ hr {
     background-color: #6B6840;
 }
 
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -45,6 +47,13 @@ nav {
     color: #FFF;
     font-size: 24px;
     padding: 20px 20px;
+}
+
+.burger-menu {
+    display: none;
+    margin-left: 25px;
+    position: relative;
+    top: 1px;
 }
 
 nav h1 {
@@ -63,10 +72,27 @@ nav a {
     color: #FFF;
 }
 
+@media only screen and (max-width: 650px) {
+
+    .top-links {
+        display: none
+    }
+
+    .burger-menu{
+        display: inline-block;
+    }
+
+}
+
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.logo-container img {
+    position: relative;
+    top: -2px;
 }
 
 .cart {
@@ -79,6 +105,8 @@ nav a {
 
 .cart svg {
     margin-right: 5px;
+    position: relative;
+    top: 3px;
 }
 
 .cart svg:hover {
@@ -135,6 +163,25 @@ nav a {
     width: 300px;
     height: 300px;
     /* border: 2px solid #9c9c9c; */
+}
+
+@media only screen and (max-width: 650px) {
+    .products-display {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-nav ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .product-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-text {
+        width: 95vw;
+    }
 }
 
 .product-link {
@@ -205,6 +252,30 @@ button:active {
     margin-bottom: 50px;
 }
 
+@media only screen and (max-width: 650px) {
+
+    .product-detail {
+        padding: 40px 0;
+    }
+
+    .product-details {
+        width: 95vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-details img {
+        width: 80vw;
+    }
+
+    .product-details-text {
+        width: 90vw;
+        margin-top: 25px;
+    }
+
+}
+
 .qty {
     display: flex;
     align-items: center;
@@ -216,6 +287,8 @@ button:active {
 
 .qtyButton {
     cursor: pointer;
+    position: relative;
+    top: 2px;
 }
 
 .cart-display {
@@ -237,6 +310,20 @@ button:active {
     margin: 80px 0 40px;
 }
 
+@media only screen and (max-width: 650px) {
+    .cart-row {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        place-items: center;
+        margin-top: 40px;
+        font-size: 12px;
+    }
+
+    .cart-row img {
+        width: 25px;
+    }
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -255,6 +342,7 @@ button:active {
 .hero img{
     width: 100%;
 }
+
 
 .route-content {
     width: 100%;
@@ -285,14 +373,41 @@ button:active {
     padding: 10px;
 }
 
+
 .home-quote {
     background-color: #F6F6F6;
     margin-bottom: 90px;
 }
 
+.home-quote figure {
+    margin-top: 20px;
+}
+
 .home-quote figcaption {
     font-size: 24px;
 }
+
+@media only screen and (max-width: 650px) {
+
+    .hero img,
+    .home-quote img {
+        width: 100% !important;
+        height: 70vh !important;
+        left: 0 !important;
+        object-fit: cover;
+        object-position: 60% 0;
+    }
+
+    .home-pictures img {
+        width: 100vw;
+    }
+
+    .home-quote figcaption {
+        font-size: 18px;
+    }
+
+}
+
 
 .footer {
     background-color: #1E1E1E;
@@ -312,9 +427,17 @@ button:active {
 
 .home-icon-section {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+
 }
+
+.home-icon-section .feature-icon:first-child {
+    margin-left: auto;
+} 
+
+.home-icon-section .feature-icon:last-child {
+    margin-right: auto;
+} 
 
 .feature-icon {
     display: flex;
@@ -332,6 +455,24 @@ button:active {
     color: #668a51;
 }
 
+@media only screen and (max-width: 650px) {
+
+    .home-icon-section,
+    .home-pictures {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        .feature-icon,
+        .home-pictures figure {
+            display: inline-block;
+            width: 200px;
+        }
+    }
+    
+
+}
+
 .home-main h2 {
     margin-left: 20px;
     font-size: 40px;
@@ -341,3 +482,52 @@ button:active {
 .home-main p {
     margin-left: 20px;
 }
+
+
+/* mobile nav style */
+.overlay-nav {
+    height: 0%;
+    width: 100%;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s;
+}
+
+.overlay-links {
+    position: relative;
+    top: 25%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px;   
+}
+
+
+.overlay-nav a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #FFF;
+    display: block; 
+    transition: 0.3s; 
+}
+
+.overlay-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay-nav a {font-size: 20px}
+    .overlay-nav .close-btn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

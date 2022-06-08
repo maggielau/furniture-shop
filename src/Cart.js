@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { MinusSquare, PlusSquare, Delete } from './Icons';
 
 
+const buttonAlert = () => {
+    alert ("Sorry, this is a demo site. Thanks for visiting!");
+}
+
+
 export default function Cart ({cart, delProducts, addProducts}) {
 
 
@@ -47,7 +52,7 @@ export default function Cart ({cart, delProducts, addProducts}) {
         <div className="cart-display">
             {displayCart()}
             <h3>Total: ${displayTotal()}</h3>
-            <button>Check Out</button>
+            <button onClick={buttonAlert}>Check Out</button>
         </div>
     );
 
