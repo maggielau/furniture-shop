@@ -6,6 +6,11 @@
 
 html {
     background-color: #E0DFE2;
+    height: 100%;
+}
+
+body {
+    height: 100%;
 }
 
 a {
@@ -128,10 +133,12 @@ nav a {
 
 .about-container img {
     width: 60vw;
+    max-width: 2100px;
 }
 
 .about-text {
     width: 60vw;
+    max-width: 2100px;
     margin-bottom: 40px;
 }
 
@@ -144,6 +151,7 @@ nav a {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 60vw;
+    max-width: 2100px;
     place-items: center;
     gap: 10px;
 }
@@ -153,6 +161,7 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
     width: 80vw;
+    max-width: 2100px;
 }
 
 .product-card {
@@ -330,6 +339,9 @@ button:active {
     align-items: center;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
+    max-width: 2100px;
+    margin: auto;
+    min-height: 100%;
 }
 
 .main-container {
