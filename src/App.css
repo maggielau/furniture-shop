@@ -42,6 +42,7 @@ hr {
     display: grid;
     grid-template-columns: auto 100px;
     background-color: #6B6840;
+    height: 90px;
 }
 
 
@@ -358,6 +359,7 @@ button:active {
 
 .route-content {
     width: 100%;
+    min-height: calc(100vh - 90px - 40px);
     background-color: #F6F6F6;
 }
 
@@ -430,6 +432,7 @@ button:active {
     justify-content: center;
     padding: 10px;
     font-size: 14px;
+    height: 40px;
 }
 
 .footer img {
@@ -445,10 +448,12 @@ button:active {
 
 .home-icon-section .feature-icon:first-child {
     margin-left: auto;
+    margin-right: 90px;
 } 
 
 .home-icon-section .feature-icon:last-child {
     margin-right: auto;
+    margin-left: 90px;
 } 
 
 .feature-icon {
