@@ -10,7 +10,7 @@ export default function About () {
                 Lectus sit amet est placerat. Cursus metus aliquam eleifend mi in. Orci sagittis eu volutpat odio facilisis mauris sit amet. Ipsum consequat nisl vel pretium lectus. Mauris vitae ultricies leo integer malesuada nunc. Pharetra convallis posuere morbi leo urna molestie at elementum. Dignissim cras tincidunt lobortis feugiat vivamus at. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Hendrerit dolor magna eget est lorem ipsum dolor sit. Vulputate dignissim suspendisse in est ante in.
                 </p>
             </div>
-            <img src="%PUBLIC_URL%/images/about.jpg" />
+            <img src={process.env.PUBLIC_URL + "/images/about.jpg"} />
         </div>
     );
 }

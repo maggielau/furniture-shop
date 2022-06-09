@@ -11,7 +11,7 @@ export default function Nav() {
     return (
         <nav>
             <div className="logo-container">
-                <Link to="/"><img src='%PUBLIC_URL%/images/logo.svg' /></Link>
+                <Link to="/"><img src={process.env.PUBLIC_URL + '/images/logo.svg'} /></Link>
                 <h1>Furnico</h1>
             </div>
             <ul className="top-links">

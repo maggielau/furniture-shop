@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-        <a href="https://github.com/maggielau" target="_blank"><img src="%PUBLIC_URL%/images/github-logo-small-white.svg" /></a>Maggie Lau
+        <a href="https://github.com/maggielau" target="_blank"><img src={process.env.PUBLIC_URL + "/images/github-logo-small-white.svg"} /></a>Maggie Lau
         </div>
       </div>
     </Router>
