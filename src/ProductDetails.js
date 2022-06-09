@@ -25,7 +25,7 @@ export default function ProductDetails({addProducts}) {
         <div className="product-detail">
             <h2>{data.title}</h2>
             <div className="product-details">
-                <img src={"http://localhost:3000"+data.image} width="400px"/>
+                <img src={"https://calm-mountain-38765.herokuapp.com"+data.image} width="400px"/>
                 <div className="product-details-text">
                     <div className="product-desc">{data.description} </div>
                     <div className="product-price">${parseFloat(data.price).toFixed(2)}</div>

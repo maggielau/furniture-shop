@@ -18,7 +18,7 @@ export default function Cart ({cart, delProducts, addProducts}) {
         else {
             return (cart.map(product => 
                         <div className="cart-row" key={product._id}>
-                            <img src={product.image} width="50px"/>
+                            <img src={"https://calm-mountain-38765.herokuapp.com" + product.image} width="50px"/>
                             <p>{product.title}</p>
                             <div className="product-price">${parseFloat(product.price).toFixed(2)}</div>
                             <div className="qty">
