@@ -2,17 +2,17 @@ export default function Home() {
     return (
         <div className="home-main">
             <div className="hero">
-                <img src="/images/hero1.webp" />
+                <img src="%PUBLIC_URL%/images/hero1.webp" />
             </div>
             <div className="home-icon-section">
                 <div className="feature-icon">
-                    <img src="/images/icon1.png"></img> <span>Every season, <strong>new</strong> products</span>
+                    <img src="%PUBLIC_URL%/images/icon1.png"></img> <span>Every season, <strong>new</strong> products</span>
                 </div>
                 <div className="feature-icon">
-                    <img src="/images/icon2.png"></img> <span>Reliable, fast, <strong>free</strong> delivery</span>
+                    <img src="%PUBLIC_URL%/images/icon2.png"></img> <span>Reliable, fast, <strong>free</strong> delivery</span>
                 </div>
                 <div className="feature-icon">
-                    <img src="/images/icon3.png"></img> <span>Eco-friendly, <strong>sustainable</strong> design</span>
+                    <img src="%PUBLIC_URL%/images/icon3.png"></img> <span>Eco-friendly, <strong>sustainable</strong> design</span>
                 </div>
             </div>
             <hr></hr>
@@ -21,15 +21,15 @@ export default function Home() {
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
                 <div className="home-pictures">
                     <figure>
-                        <img src="/images/home-pic1.jpg" />
+                        <img src="%PUBLIC_URL%/images/home-pic1.jpg" />
                         <figcaption>Dine.</figcaption>
                     </figure>
                     <figure>
-                        <img src="/images/home-pic2.jpg" />
+                        <img src="%PUBLIC_URL%/images/home-pic2.jpg" />
                         <figcaption>Live.</figcaption>
                     </figure>
                     <figure>
-                        <img src="/images/home-pic3.jpg" />
+                        <img src="%PUBLIC_URL%/images/home-pic3.jpg" />
                         <figcaption>Work.</figcaption>
                     </figure>
                 </div>
@@ -39,7 +39,7 @@ export default function Home() {
                     <h2>Crafted with excellence.</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
                     <figure>
-                        <img src="/images/workshop.webp" />
+                        <img src="%PUBLIC_URL%/images/workshop.webp" />
                         <figcaption>"Sed risus pretium quam vulputate dignissim suspendisse in est. Faucibus nisl tincidunt eget nullam non." </figcaption>
                     </figure>
             </div>

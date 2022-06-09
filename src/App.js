@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import Nav from './Nav';
 import Home from './Home';
@@ -68,7 +68,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="content">
         <div className="main-container">
           <div className="header">
@@ -93,7 +93,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-        <a href="https://github.com/maggielau" target="_blank"><img src="/images/github-logo-small-white.svg" /></a>Maggie Lau
+        <a href="https://github.com/maggielau" target="_blank"><img src="%PUBLIC_URL%/images/github-logo-small-white.svg" /></a>Maggie Lau
         </div>
       </div>
     </Router>
