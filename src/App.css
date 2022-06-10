@@ -232,6 +232,10 @@ nav a {
     margin-top: 40px;
 }
 
+.product-details img {
+    margin-right: 40px;
+}
+
 button {
     background-color: #668a51;
     border: none;
@@ -277,6 +281,7 @@ button:active {
 
     .product-details img {
         width: 80vw;
+        margin: 0;
     }
 
     .product-details-text {
