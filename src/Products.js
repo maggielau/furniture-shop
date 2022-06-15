@@ -12,10 +12,12 @@ export default function Products() {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [categoryView, setCategoryView] = useState('all');
+    const [isLoading, setLoading] = useState(true);
 
     function fetchProducts() {
         fetch("https://calm-mountain-38765.herokuapp.com/catalog/products-api").then((res)=>res.json()).then((json) => {
             setProducts(json);
+            setLoading(false);
         })
         .catch(error => {
             console.log("Fetch API Error:" + error);
@@ -45,6 +47,13 @@ export default function Products() {
         )
     }
 
+    function showLoadSpinner () {
+        if (isLoading)
+            return (<div id="spinner"></div>);
+        else
+            return;
+    }
+
     return (
         <div className="products-container">
             <h2>Our Products</h2>
@@ -58,7 +67,9 @@ export default function Products() {
                 </ul>
             </div>
 
+            
             <div className="products-display">
+                {showLoadSpinner()}
                 {products.map(product => {
                     if (categoryView === 'all') {
                         return (renderProductCard(product))
